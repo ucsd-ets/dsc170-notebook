@@ -1,0 +1,14 @@
+arcgis
+pysal
+Geopandas
+# pinning to 0.16.0 due to https://github.com/SciTools/cartopy/issues/1270
+Cartopy
+opencv-contrib-python-headless==3.4.5.20
+folium
+mplleaflet
+mapclassify
+Rtree
+# Workaround for Arcgis "TypeError: expected str, bytes or os.PathLike object, not int" error
+# similar to discussion at: https://redmine.auroville.org.in/issues/7536
+# blamed on pyshp>=2.0.0
+pyshp==1.2.12
