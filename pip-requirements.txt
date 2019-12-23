@@ -11,4 +11,4 @@ Rtree
 # Workaround for Arcgis "TypeError: expected str, bytes or os.PathLike object, not int" error
 # similar to discussion at: https://redmine.auroville.org.in/issues/7536
 # blamed on pyshp>=2.0.0
-pyshp==1.2.12
+#pyshp==1.2.12

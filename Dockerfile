@@ -1,9 +1,10 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
+# (modified by UC San Diego ITS
 ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2019.4.6
 FROM $BASE_CONTAINER
 
-LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+LABEL maintainer="UC San Diego ITS/ETS <its-ets-dsml@ucsd.edu>"
 
 USER root
 
@@ -13,7 +14,10 @@ RUN apt-get update && apt-get -qq install -y \
 	libproj-dev proj-data proj-bin libgeos-dev libspatialindex-dev
 
 # Install ESRI-managed package
-RUN conda install -c esri arcgis -y 
+# Conda > 4.7.10 required for arcgis==1.7.0 - only upgrade that package 
+#    and not the entire conda package environment
+RUN conda install conda==4.8.0 -y 
+RUN conda install -c esri arcgis==1.7.0 -y 
 
 # nbgrader
 RUN conda install nbgrader && conda clean -tipsy && \
