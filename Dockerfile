@@ -25,10 +25,5 @@ RUN jupyter nbextension enable arcgis --py --sys-prefix
 
 RUN chown -R $NB_UID /home/jovyan
 
-RUN apt-get -qq install -y strace
-RUN echo "jovyan    ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers.d/jovyan
-
-COPY Untitled8.ipynb /home/jovyan/
-
 USER $NB_UID
 
