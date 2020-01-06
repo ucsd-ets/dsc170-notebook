@@ -7,8 +7,8 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
 
-ENV http_proxy=http://web.ucsd.edu:3128
-ENV https_proxy=http://web.ucsd.edu:3128
+#ENV http_proxy=http://web.ucsd.edu:3128
+#ENV https_proxy=http://web.ucsd.edu:3128
 
 ###########################
 # Requested for DSC170 WI20
