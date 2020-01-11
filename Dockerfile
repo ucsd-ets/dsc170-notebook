@@ -25,5 +25,8 @@ RUN jupyter nbextension enable arcgis --py --sys-prefix
 
 RUN chown -R $NB_UID /home/jovyan
 
+COPY install-nbgrader.sh /root/install-nbgrader.sh
+RUN /root/install-nbgrader.sh
+
 USER $NB_UID
 
