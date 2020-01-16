@@ -28,5 +28,9 @@ RUN chown -R $NB_UID /home/jovyan
 COPY install-nbgrader.sh /root/install-nbgrader.sh
 RUN /root/install-nbgrader.sh
 
+COPY pip-requirements.txt /tmp
+RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt  && \
+        fix-permissions $CONDA_DIR
+
 USER $NB_UID
 
