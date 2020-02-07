@@ -3,6 +3,7 @@ pysal
 ## NOTE: cartopy requires PROJ < 6 (4.9.3, provided by OS 'apt-get ')
 ## graphviz and rasterio PROJ >= 6 (provided by conda-forge)
 ## So cartopy must be installed before graphviz/rasterio!
+pyshp==1.2.12
 cartopy
 Geopandas
 folium
