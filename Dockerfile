@@ -19,14 +19,11 @@ RUN apt-get update && apt-get -qq install -y \
 # Install ESRI-managed package
 # Conda > 4.7.10 required for arcgis
 RUN conda upgrade conda -y --no-pin && \
-	conda install -c esri arcgis==1.6.0 -y 
+	conda install -c esri arcgis==1.8.0 -y 
 
 RUN jupyter nbextension enable arcgis --py --sys-prefix
 
 RUN chown -R $NB_UID /home/jovyan
-
-COPY install-nbgrader.sh /root/install-nbgrader.sh
-RUN /root/install-nbgrader.sh
 
 COPY pip-requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt  && \
