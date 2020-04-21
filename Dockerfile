@@ -22,7 +22,8 @@ RUN conda upgrade conda -y --no-pin && \
 	conda install --yes --quiet -c esri arcgis==1.8.0 notebook=5.7.8 jupyter_contrib_nbextensions && \
         fix-permissions $CONDA_DIR
 
-
+RUN python -m arcgis.install
+RUN jupyter nbextension enable widgetsnbextension --py --sys-prefix
 RUN jupyter nbextension enable arcgis --py --sys-prefix
 
 RUN chown -R $NB_UID /home/jovyan
