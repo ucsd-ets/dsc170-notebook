@@ -19,7 +19,7 @@ RUN apt-get update && apt-get -qq install -y \
 # Install ESRI-managed package
 # Conda > 4.7.10 required for arcgis
 RUN conda upgrade conda -y --no-pin && \
-	conda install -c esri arcgis==1.8.0 notebook=5.7.8-y 
+	conda install --yes --quiet -c esri arcgis==1.8.0 notebook=5.7.8 
 
 RUN jupyter nbextension enable arcgis --py --sys-prefix
 
