@@ -8,6 +8,8 @@ Environment used for DSC 170: Spatial Data Science and Applications
   <summary>Click to expand</summary>
 
 ```
+# packages in environment at /opt/conda:
+#
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                 conda_forge    conda-forge
 _openmp_mutex             4.5                       1_gnu    conda-forge
@@ -17,6 +19,7 @@ affine                    2.3.0                    pypi_0    pypi
 alabaster                 0.7.12                   pypi_0    pypi
 alembic                   1.4.2              pyh9f0ad1d_0    conda-forge
 arcgis                    1.8.2                    pypi_0    pypi
+arrow                     0.16.0                   pypi_0    pypi
 async_generator           1.10                       py_0    conda-forge
 attrs                     19.3.0                     py_0    conda-forge
 babel                     2.8.0                    pypi_0    pypi
@@ -24,6 +27,7 @@ backcall                  0.2.0              pyh9f0ad1d_0    conda-forge
 backports                 1.0                        py_2    conda-forge
 backports.functools_lru_cache 1.6.1                      py_0    conda-forge
 beautifulsoup4            4.9.1            py38h32f6830_0    conda-forge
+binaryornot               0.4.4                    pypi_0    pypi
 binutils_impl_linux-64    2.34                 h2122c62_9    conda-forge
 binutils_linux-64         2.34                h47ac705_27    conda-forge
 blas                      2.14                   openblas    conda-forge
@@ -55,6 +59,7 @@ cloudpickle               1.5.0                      py_0    conda-forge
 conda                     4.8.3            py38h32f6830_2    conda-forge
 conda-package-handling    1.7.0            py38h1e0a361_4    conda-forge
 configurable-http-proxy   4.2.1           node13_he01fd0c_0    conda-forge
+cookiecutter              1.7.2                    pypi_0    pypi
 coverage                  5.2.1                    pypi_0    pypi
 cryptography              3.0              py38h766eaa4_0    conda-forge
 curl                      7.71.1               he644dc0_4    conda-forge
@@ -73,7 +78,7 @@ entrypoints               0.3             py38h32f6830_1001    conda-forge
 env-backup                0.0.3                    pypi_0    pypi
 esda                      2.3.1                    pypi_0    pypi
 fastcache                 1.1.0            py38h1e0a361_1    conda-forge
-fiona                     1.8.13.post1             pypi_0    pypi
+fiona                     1.8.14                   pypi_0    pypi
 folium                    0.11.0                   pypi_0    pypi
 fontconfig                2.13.1            h86ecdb6_1001    conda-forge
 freetype                  2.10.2               he06d7ca_0    conda-forge
@@ -112,6 +117,7 @@ importlib_metadata        1.7.0                         0    conda-forge
 inequality                1.0.0                    pypi_0    pypi
 iniconfig                 1.0.1                    pypi_0    pypi
 ipykernel                 5.3.4            py38h23f93f0_0    conda-forge
+ipyleaflet                0.13.3                   pypi_0    pypi
 ipympl                    0.5.7              pyh9f0ad1d_1    conda-forge
 ipython                   7.17.0           py38h1cdfbd6_0    conda-forge
 ipython_genutils          0.2.0                      py_1    conda-forge
@@ -119,6 +125,7 @@ ipywidgets                7.5.1                      py_0    conda-forge
 jedi                      0.17.2           py38h32f6830_0    conda-forge
 jeepney                   0.4.3                    pypi_0    pypi
 jinja2                    2.11.2             pyh9f0ad1d_0    conda-forge
+jinja2-time               0.2.0                    pypi_0    pypi
 joblib                    0.16.0                     py_0    conda-forge
 jpeg                      9d                   h516909a_0    conda-forge
 json5                     0.9.4              pyh9f0ad1d_0    conda-forge
@@ -138,8 +145,9 @@ jupyterhub-base           1.1.0            py38h32f6830_4    conda-forge
 jupyterlab                2.1.5                      py_0    conda-forge
 jupyterlab_server         1.2.0                      py_0    conda-forge
 jxrlib                    1.1                  h516909a_2    conda-forge
+keplergl                  0.2.1                    pypi_0    pypi
 kernel-headers_linux-64   2.6.32              h77966d4_13    conda-forge
-keyring                   21.3.1                   pypi_0    pypi
+keyring                   21.4.0                   pypi_0    pypi
 kiwisolver                1.2.0            py38hbf85e49_0    conda-forge
 krb5                      1.17.1               hfafb76e_2    conda-forge
 lcms2                     2.11                 hbd6801e_0    conda-forge
@@ -187,6 +195,8 @@ mapclassify               2.3.0                    pypi_0    pypi
 markdown                  3.2.2                    pypi_0    pypi
 markupsafe                1.1.1            py38h1e0a361_1    conda-forge
 matplotlib-base           3.2.2            py38h2af1d28_0    conda-forge
+mesa                      0.8.7                    pypi_0    pypi
+mesa-geo                  0.2.0                    pypi_0    pypi
 mgwr                      2.1.1                    pypi_0    pypi
 mistune                   0.8.4           py38h1e0a361_1001    conda-forge
 mock                      4.0.2            py38h32f6830_0    conda-forge
@@ -235,6 +245,7 @@ pip                       20.2.2                     py_0    conda-forge
 pixman                    0.38.0            h516909a_1003    conda-forge
 pluggy                    0.13.1                   pypi_0    pypi
 pointpats                 2.2.0                    pypi_0    pypi
+poyo                      0.5.0                    pypi_0    pypi
 prometheus_client         0.8.0              pyh9f0ad1d_0    conda-forge
 prompt-toolkit            3.0.6                      py_0    conda-forge
 protobuf                  3.12.4           py38h950e882_0    conda-forge
@@ -261,6 +272,7 @@ python                    3.8.5           h4d41432_2_cpython    conda-forge
 python-dateutil           2.8.0                    pypi_0    pypi
 python-editor             1.0.4                      py_0    conda-forge
 python-json-logger        0.1.11                     py_0    conda-forge
+python-slugify            4.0.1                    pypi_0    pypi
 python_abi                3.8                      1_cp38    conda-forge
 pytz                      2020.1             pyh9f0ad1d_0    conda-forge
 pywavelets                1.1.1            py38h8790de6_1    conda-forge
@@ -489,6 +501,7 @@ sysroot_linux-64          2.12                h77966d4_13    conda-forge
 tblib                     1.6.0                      py_0    conda-forge
 terminado                 0.8.3            py38h32f6830_1    conda-forge
 testpath                  0.4.4                      py_0    conda-forge
+text-unidecode            1.3                      pypi_0    pypi
 threadpoolctl             2.1.0              pyh5ca1d4c_0    conda-forge
 tifffile                  2020.8.13                  py_0    conda-forge
 timeout-decorator         0.4.1                    pypi_0    pypi
@@ -501,6 +514,7 @@ toolz                     0.10.0                     py_0    conda-forge
 tornado                   6.0.4            py38h1e0a361_1    conda-forge
 tqdm                      4.48.2             pyh9f0ad1d_0    conda-forge
 traitlets                 4.3.3            py38h32f6830_1    conda-forge
+traittypes                0.2.1                    pypi_0    pypi
 typing_extensions         3.7.4.2                    py_0    conda-forge
 tzlocal                   2.1                pyh9f0ad1d_0    conda-forge
 urllib3                   1.24.3                   pypi_0    pypi
@@ -545,12 +559,14 @@ affine                            2.3.0
 alabaster                         0.7.12
 alembic                           1.4.2
 arcgis                            1.8.2
+arrow                             0.16.0
 async-generator                   1.10
 attrs                             19.3.0
 Babel                             2.8.0
 backcall                          0.2.0
 backports.functools-lru-cache     1.6.1
 beautifulsoup4                    4.9.1
+binaryornot                       0.4.4
 bleach                            3.1.5
 blinker                           1.4
 bokeh                             2.1.1
@@ -569,6 +585,7 @@ cligj                             0.5.0
 cloudpickle                       1.5.0
 conda                             4.8.3
 conda-package-handling            1.6.1
+cookiecutter                      1.7.2
 coverage                          5.2.1
 cryptography                      3.0
 cycler                            0.10.0
@@ -585,7 +602,7 @@ entrypoints                       0.3
 env-backup                        0.0.3
 esda                              2.3.1
 fastcache                         1.1.0
-Fiona                             1.8.13.post1
+Fiona                             1.8.14
 folium                            0.11.0
 fsspec                            0.8.0
 fuzzywuzzy                        0.18.0
@@ -605,6 +622,7 @@ importlib-metadata                1.7.0
 inequality                        1.0.0
 iniconfig                         1.0.1
 ipykernel                         5.3.4
+ipyleaflet                        0.13.3
 ipympl                            0.5.7
 ipython                           7.17.0
 ipython-genutils                  0.2.0
@@ -612,6 +630,7 @@ ipywidgets                        7.5.1
 jedi                              0.17.2
 jeepney                           0.4.3
 Jinja2                            2.11.2
+jinja2-time                       0.2.0
 joblib                            0.16.0
 json5                             0.9.4
 jsonschema                        3.2.0
@@ -628,7 +647,8 @@ jupyter-telemetry                 0.0.5
 jupyterhub                        1.1.0
 jupyterlab                        2.1.5
 jupyterlab-server                 1.2.0
-keyring                           21.3.1
+keplergl                          0.2.1
+keyring                           21.4.0
 kiwisolver                        1.2.0
 lerc                              0.1.0
 libpysal                          4.3.0
@@ -640,6 +660,8 @@ mapclassify                       2.3.0
 Markdown                          3.2.2
 MarkupSafe                        1.1.1
 matplotlib                        3.2.2
+Mesa                              0.8.7
+mesa-geo                          0.2.0
 mgwr                              2.1.1
 mistune                           0.8.4
 mock                              4.0.2
@@ -678,6 +700,7 @@ Pillow                            7.2.0
 pip                               20.2.2
 pluggy                            0.13.1
 pointpats                         2.2.0
+poyo                              0.5.0
 prometheus-client                 0.8.0
 prompt-toolkit                    3.0.6
 protobuf                          3.12.4
@@ -701,6 +724,7 @@ pytest-cov                        2.10.1
 python-dateutil                   2.8.0
 python-editor                     1.0.4
 python-json-logger                0.1.11
+python-slugify                    4.0.1
 pytz                              2020.1
 PyWavelets                        1.1.1
 PyYAML                            5.3.1
@@ -755,6 +779,7 @@ tables                            3.6.1
 tblib                             1.6.0
 terminado                         0.8.3
 testpath                          0.4.4
+text-unidecode                    1.3
 threadpoolctl                     2.1.0
 tifffile                          2020.8.13
 timeout-decorator                 0.4.1
@@ -764,6 +789,7 @@ toolz                             0.10.0
 tornado                           6.0.4
 tqdm                              4.48.2
 traitlets                         4.3.3
+traittypes                        0.2.1
 typing-extensions                 3.7.4.2
 tzlocal                           2.1
 urllib3                           1.24.3
