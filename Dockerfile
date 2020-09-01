@@ -16,8 +16,10 @@ COPY pip-requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt --use-feature=2020-resolver
 
 RUN python -m arcgis.install
-RUN jupyter nbextension enable widgetsnbextension --py --sys-prefix
-RUN jupyter nbextension enable arcgis --py --sys-prefix
+# no longer need enabling widgetsnbextension stuff after notebook v5.3
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager arcgis-map-ipywidget
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager keplergl-jupyter
 
 COPY /arcgis_test.ipynb /home/jovyan
 RUN chown -R $NB_UID /home/jovyan

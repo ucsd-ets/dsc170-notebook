@@ -12,3 +12,6 @@ mplleaflet
 mapclassify
 Rtree
 geopy
+ipyleaflet
+mesa-geo
+keplergl
