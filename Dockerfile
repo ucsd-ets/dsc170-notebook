@@ -1,36 +1,31 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
-ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2019.4.6
+ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:dev
 FROM $BASE_CONTAINER
 
 LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
 
-#ENV http_proxy=http://web.ucsd.edu:3128
-#ENV https_proxy=http://web.ucsd.edu:3128
-
 ###########################
 # Requested for DSC170 WI20
-RUN apt-get update && apt-get -qq install -y \
+RUN apt-get -qq install -y \
 	libproj-dev proj-data proj-bin libgeos-dev libspatialindex-dev \
 	graphviz
 
 # Install ESRI-managed package
-# Conda > 4.7.10 required for arcgis
-RUN conda upgrade conda -y --no-pin && \
-	conda install --yes --quiet -c esri arcgis==1.8.0 notebook=5.7.8 jupyter_contrib_nbextensions && \
-        fix-permissions $CONDA_DIR
+COPY pip-requirements.txt /tmp
+RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt --use-feature=2020-resolver
 
 RUN python -m arcgis.install
-RUN jupyter nbextension enable widgetsnbextension --py --sys-prefix
-RUN jupyter nbextension enable arcgis --py --sys-prefix
 
+# no longer need to enable widgetsnbextension stuff after notebook v5.3
+
+# Jupyterlab extensions not needed
+# RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet --no-build && \
+# 	  jupyter labextension install @jupyter-widgets/jupyterlab-manager arcgis-map-ipywidget --no-build && \
+#     jupyter labextension install @jupyter-widgets/jupyterlab-manager keplergl-jupyter --no-build
+
+
+COPY /arcgis_test.ipynb /home/jovyan
 RUN chown -R $NB_UID /home/jovyan
 
-COPY pip-requirements.txt /tmp
-RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt  && \
-        fix-permissions $CONDA_DIR
-
 USER $NB_UID
-
