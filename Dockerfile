@@ -13,7 +13,7 @@ RUN apt-get -qq install -y \
 
 # Install ESRI-managed package
 COPY pip-requirements.txt /tmp
-RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt --use-feature=2020-resolver
+RUN pip install --no-cache-dir -r /tmp/pip-requirements.txt
 
 RUN python -m arcgis.install
 
