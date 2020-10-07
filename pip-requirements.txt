@@ -6,7 +6,7 @@ pysal
 ## So cartopy must be installed before graphviz/rasterio!
 pyshp
 cartopy
-Geopandas
+Geopandas==0.8.1
 folium
 mplleaflet
 mapclassify
