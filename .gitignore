@@ -1,0 +1,5 @@
+.local
+.ipython
+.ipynb_checkpoints
+.cache
+test*/
